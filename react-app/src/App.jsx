@@ -9,6 +9,7 @@ import {
 import {Box, AppBar, Toolbar, IconButton, Typography, Drawer, Divider, List, ListItem, ListItemText} from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import Items from './components/Items';
 
 export default function App() {
   return (
@@ -26,11 +27,11 @@ export default function App() {
           {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
           <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
             <Route path="/items">
               <Items />
+            </Route>
+            <Route path="/about">
+              <About />
             </Route>
             <Route path="/">
               <Home />
@@ -40,28 +41,6 @@ export default function App() {
       </Box>
     </Router>
   );
-}
-
-function About(){
-  return (
-    <main>
-      <h1>ABOUT</h1>
-    </main>
-  )
-}
-function Items(){
-  return (
-    <main>
-      <h1>Items</h1>
-    </main>
-  )
-}
-function Home(){
-  return (
-    <main>
-      <h1>Home</h1>
-    </main>
-  )
 }
 
 function ToggleNav(){
@@ -106,5 +85,21 @@ function ToggleNav(){
       </List>
     </Drawer>
     </React.Fragment>
+  )
+}
+
+function About(){
+  return (
+    <main>
+      <h1>ABOUT</h1>
+    </main>
+  )
+}
+
+function Home(){
+  return (
+    <main>
+      <h1>Home</h1>
+    </main>
   )
 }
